@@ -125,7 +125,7 @@ celerybeat.pid
 
 temp_audio
 
-# Environments
+# Environments 
 .env
 .venv
 env/
