@@ -4,7 +4,7 @@ import os
 
 tts_bp = Blueprint('tts', __name__)
 
-@tts_bp.route('/', methods=['POST'])
+@tts_bp.route('/tts', methods=['POST'])
 def tts():
     data = request.get_json()
 
