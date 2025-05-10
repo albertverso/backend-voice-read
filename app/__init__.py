@@ -6,8 +6,11 @@ def create_app():
     CORS(app, resources={r"/api/*": {"origins": "*"}}) 
 
     from .routes.tts import tts_bp
-    from .routes.ocr import ocr_bp
+    # from .routes.ocr import ocr_bp
+    from .routes.gemini import gemini_bp
+
+    app.register_blueprint(gemini_bp, url_prefix='/api')
     app.register_blueprint(tts_bp, url_prefix='/api')
-    app.register_blueprint(ocr_bp, url_prefix='/api')
+    # app.register_blueprint(ocr_bp, url_prefix='/api')
 
     return app
