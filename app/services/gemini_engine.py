@@ -14,7 +14,7 @@ def generate_text_from_image(image_path: str):
     model = genai.GenerativeModel("gemini-1.5-flash")
     
     # Gerando conteúdo a partir da imagem
-    response = model.generate_content(["Trascreva o texto analise pode ser um texto normal ou um print de uma conversa mas lembrando somente a parte das falas de aplicativo de mensagens, geralmente whatsapp, telegram, instagram onde as falas sao representadas por balões de falas(não precisa separar os balaões por '\n' somente dê espaço):", image])
+    response = model.generate_content(["Analise a imagem e transcreva seus textos em português(não precisa separar os textos por '\n' somente dê espaço): ", image])
 
     text = response.text
     
